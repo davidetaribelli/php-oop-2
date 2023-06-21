@@ -1,12 +1,12 @@
 <?php
 class Cuccia extends Product{
     
-    public $dimensione;
+    public $info;
 
-    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $dimensione)
+    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $info)
     {
         parent::__construct($nome, $prezzo, $categoria, $img);
-        $this->dimensione = $dimensione;
+        $this->info = $info;
     }    
 }
 

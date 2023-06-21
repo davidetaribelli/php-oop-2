@@ -1,11 +1,11 @@
 <?php
 class Cibo extends Product
 {
-    public $tipodiCroccantino;
+    public $info;
 
-    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $tipodiCroccantino)
+    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $info)
     {
         parent::__construct($nome, $prezzo, $categoria, $img);
-        $this->tipodiCroccantino = $tipodiCroccantino;
+        $this->info = $info;
     }
 }
