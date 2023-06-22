@@ -7,7 +7,7 @@ class Product{
     use Quantita;
 
     public $nome;
-    public $prezzo;
+    private $prezzo;
     public $categoria;
     public $img;
 
@@ -18,6 +18,19 @@ class Product{
         $this->categoria = $categoria;
         $this->img = $img;
     }
+
+    public function setPrezzo($value) {
+		$this->prezzo = $value;
+	}
+
+    public function getPrezzo() {
+
+		if( is_null($this->prezzo) || is_nan($this->prezzo)) {
+			throw new Exception("il valore non è numerico");
+		}
+		return $this->prezzo . " €";
+	}
+
 }
 
 ?>
