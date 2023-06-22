@@ -1,7 +1,11 @@
 <?php
 
+require_once __DIR__ . '/../traits/Quantita.php';
 require_once __DIR__ . "/Categoria.php";
 class Product{
+
+    use Quantita;
+
     public $nome;
     public $prezzo;
     public $categoria;
