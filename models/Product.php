@@ -25,7 +25,7 @@ class Product{
 
     public function getPrezzo() {
 
-		if( is_null($this->prezzo) || is_nan($this->prezzo)) {
+		if( !is_numeric($this->prezzo)) {
 			throw new Exception("il valore non è numerico");
 		}
 		return $this->prezzo . " €";
