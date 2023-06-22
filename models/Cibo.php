@@ -1,11 +1,19 @@
 <?php
 class Cibo extends Product
 {
-    public $info;
+    public $gusto;
 
-    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $info)
+    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $gusto)
     {
         parent::__construct($nome, $prezzo, $categoria, $img);
-        $this->info = $info;
+        $this->gusto = $gusto;
+    }
+
+    public function getGusto(){
+        return $this->gusto;
+    }
+
+    public function setGusto($value){
+        $this->gusto = $value;
     }
 }

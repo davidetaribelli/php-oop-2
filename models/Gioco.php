@@ -1,12 +1,20 @@
 <?php
 class Gioco extends Product{
 
-    public $info;
+    public $materiale;
 
-    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $info)
+    public function __construct($nome, $prezzo, Categoria $categoria, $img,  $materiale)
     {
         parent::__construct($nome, $prezzo, $categoria, $img);
-        $this->info = $info;
+        $this->materiale = $materiale;
+    }
+
+    public function getMateriale(){
+        return $this->materiale;
+    }
+
+    public function setMateriale($value){
+        $this->materiale = $value;
     }
 }
 

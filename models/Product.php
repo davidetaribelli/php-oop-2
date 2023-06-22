@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . "/Categoria.php";
 class Product{
     public $nome;
     public $prezzo;
@@ -9,11 +11,7 @@ class Product{
     {
         $this->nome = $nome;
         $this->prezzo = $prezzo;   
-        if ($categoria instanceof Categoria){
-            $this->categoria = $categoria-> nome;
-        }else{
-            die("La categoria deve appartenere alla classe Categoria");
-        }
+        $this->categoria = $categoria;
         $this->img = $img;
     }
 }
